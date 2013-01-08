@@ -1,4 +1,7 @@
 
+// Hold shared data
+data = {};
+
 // Simple DOM query
 $ = function( query ) {
   return document.querySelector(query);
@@ -16,12 +19,22 @@ toggleClass = function( el, cName ) {
   }
 };
 
+// Pretty print seconds
+prettyTime = function( seconds ) {
+  seconds = Math.round(seconds);
+  var minutes = Math.floor(seconds / 60);
+  var diff = seconds - (minutes * 60);
+  var time = minutes + ":" + diff;
+  return time;
+}
+
 // Easy way to update HTML
 el = {
   _app: $(".app"),
   title: $(".title"),
   artist: $(".artist"),
-  album: $(".album")
+  album: $(".album"),
+  time: $(".time")
 };
 makeFunction = function( el ) {
   return function( text ) {
@@ -36,19 +49,26 @@ for (var key in el) {
 
 // Toggle between full and minimal (fired on double click)
 el._app.ondblclick = function( e ) {
-  console.log("test")
   toggleClass(this, "full");
 };
 
 // Called by BowTie when the track is changed
-function trackChanged( track ) {
+function trackUpdate( track ) {
 
   var trackTitle  = track.title  || "";
   var trackArtist = track.artist || "";
   var trackAlbum  = track.album  || "";
 
+  data.trackLength = track.length || 0;
+
   el.title(trackTitle);
   el.artist(trackArtist);
   el.album(trackAlbum);
 
+}
+
+// Called by BowTie every second
+function statusUpdate() {
+  var current = Player.playerPosition();
+  el.time(prettyTime(current) + " / " + prettyTime(data.trackLength));
 }

@@ -21,6 +21,8 @@
     <key>BTWindowHeight</key>
     <integer>100</integer>
     <key>BTTrackFunction</key>
-    <string>trackChanged</string>
+    <string>trackUpdate</string>
+    <key>BTStatusFunction</key>
+    <string>statusUpdate</string>
 </dict>
 </plist>

@@ -26,17 +26,20 @@ div {
 }
 
 .app .artist,
-.app .album {
+.app .album,
+.app .time {
   text-transform: uppercase;
   font-size: 10px;
   line-height: 10px;
   padding-top: 5px;
 }
 
-.app .album {
+.app .album,
+.app .time {
   opacity: 0;
 }
 
-.app.full .album {
+.app.full .album,
+.app.full .time {
   opacity: 1;
 }
