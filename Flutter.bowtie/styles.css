@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0[];
+}
+
+div {
+  /* Prevent user selecting text when double clicking */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.app div {
+  color: #fff;
+  color: rgba(255,255,255,0.9);
+  font: bold 14px/18px "Helvetica Neue";
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-shadow: #000 0 0 0;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  border-left: solid 7px rgba(255,255,255,0.1);
+  -webkit-transition: opacity 0.4s;
+  padding-left: 7px;
+  max-width: 285px;
+}
+
+.app .artist,
+.app .album {
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 10px;
+  padding-top: 5px;
+}
+
+.app .album {
+  opacity: 0;
+}
+
+.app.full .album {
+  opacity: 1;
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>BTThemeName</key>
+    <string>Flutter</string>
+    <key>BTThemeArtist</key>
+    <string>George Czabania</string>
+    <key>BTArtistURL</key>
+    <string>http://mintco.de</string>
+    <key>BTThemeIdentifier</key>
+    <string>com.mintcode.flutter</string>
+    <key>BTThemeVersion</key>
+    <string>1.0</string>
+    <key>BTMainFile</key>
+    <string>index.html</string>
+    <key>BTThemePreviewImage</key>
+    <string>preview.png</string>
+    <key>BTWindowWidth</key>
+    <integer>300</integer>
+    <key>BTWindowHeight</key>
+    <integer>100</integer>
+    <key>BTTrackFunction</key>
+    <string>trackChanged</string>
+</dict>
+</plist>
